@@ -14,7 +14,7 @@ public class StartApp implements CommandLineRunner {
 	public void run(String... args) throws Exception {
 		repository.save(new User("Fernando","fao","123"));
 		
-		repository.findAll().stream().map(element -> element.toString());
+		repository.findAll().forEach(element -> System.out.println(element));
 	}
 
 }
